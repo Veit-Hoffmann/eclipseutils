@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.3//EN" "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
+
+<!--
+    This configuration file was written by the eclipse-cs plugin configuration editor
+-->
+<!--
+    Checkstyle-Configuration: Viper Checks
+    Description: none
+-->
+<module name="Checker">
+    <property name="severity" value="warning"/>
+    <property name="localeCountry" value="US"/>
+    <property name="localeLanguage" value="en"/>
+    <module name="TreeWalker">
+        <property name="tabWidth" value="4"/>
+        <module name="FileContentsHolder"/>
+        <module name="ConstantName">
+            <property name="format" value="^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$|logger"/>
+        </module>
+        <module name="LocalFinalVariableName"/>
+        <module name="LocalVariableName"/>
+        <module name="MemberName"/>
+        <module name="MethodName"/>
+        <module name="PackageName"/>
+        <module name="ParameterName"/>
+        <module name="StaticVariableName"/>
+        <module name="TypeName"/>
+        <module name="AvoidStarImport">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="IllegalImport">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="RedundantImport">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="UnusedImports">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="LineLength">
+            <property name="max" value="200"/>
+        </module>
+        <module name="MethodLength"/>
+        <module name="ParameterNumber"/>
+        <module name="ModifierOrder">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="RedundantModifier">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="AvoidNestedBlocks"/>
+        <module name="EmptyBlock"/>
+        <module name="NeedBraces">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="DoubleCheckedLocking"/>
+        <module name="EmptyStatement"/>
+        <module name="EqualsHashCode"/>
+        <module name="IllegalInstantiation"/>
+        <module name="InnerAssignment">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="MagicNumber"/>
+        <module name="MissingSwitchDefault">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="SimplifyBooleanExpression"/>
+        <module name="SimplifyBooleanReturn"/>
+        <module name="FinalClass"/>
+        <module name="HideUtilityClassConstructor"/>
+        <module name="VisibilityModifier">
+            <property name="severity" value="error"/>
+            <property name="protectedAllowed" value="true"/>
+        </module>
+        <module name="ArrayTypeStyle">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="Regexp">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="Trailing spaces"/>
+            <property name="format" value="[ \t]+$"/>
+            <property name="illegalPattern" value="true"/>
+            <property name="ignoreComments" value="true"/>
+            <property name="message" value="Line has trailing spaces."/>
+        </module>
+        <module name="UpperEll"/>
+        <module name="ImportOrder"/>
+      
+        <module name="Regexp">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="System.out.print"/>
+            <property name="severity" value="error"/>
+            <property name="illegalPattern" value="true"/>
+            <property name="format" value="System.out.print"/>
+            <property name="message" value="System.out.print are not legal. Use Apache Commons Logging instead."/>
+        </module>
+        <module name="Regexp">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="System.exit"/>
+            <property name="severity" value="error"/>
+            <property name="illegalPattern" value="true"/>
+            <property name="format" value="System.exit"/>
+            <property name="message" value="System.exit is illegal"/>
+        </module>
+        <module name="Regexp">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="System.err.print"/>
+            <property name="severity" value="error"/>
+             <property name="illegalPattern" value="true"/>
+            <property name="format" value="System.err.print"/>
+            <property name="message" value="System.err.print is illegal. Use Apache Commons Logging instead"/>
+        </module>
+        <module name="Regexp">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value=".printStackTrace()"/>
+            <property name="severity" value="error"/>
+             <property name="illegalPattern" value="true"/>
+            <property name="format" value=".printStackTrace()"/>
+            <property name="message" value="e.printStackTrace is illegal. Use Apache Commons Logging instead."/>
+        </module>
+        <module name="Regexp">
+            <metadata name="com.atlassw.tools.eclipse.checkstyle.comment" value="org.apache.log4j"/>
+            <property name="severity" value="error"/>
+             <property name="illegalPattern" value="true"/>
+            <property name="format" value="org.apache.log4j"/>
+            <property name="message" value="Use of org.apache.log4j is not legal, use org.apache.commons.logging instead"/>
+        </module>
+        <module name="MutableException">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="ThrowsCount">
+            <property name="max" value="2"/>
+        </module>
+        <module name="CovariantEquals">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="DefaultComesLast">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="DeclarationOrder"/>
+        <module name="FallThrough"/>
+        <module name="ModifiedControlVariable">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="MultipleStringLiterals"/>
+        <module name="PackageDeclaration">
+            <property name="severity" value="error"/>
+        </module>
+        <module name="ParameterAssignment"/>
+        <module name="StringLiteralEquality"/>
+        <module name="SuperClone"/>
+        <module name="SuperFinalize"/>
+        <module name="UnnecessaryParentheses"/>
+    </module>
+    <module name="Header">
+        <property name="severity" value="error"/>
+        <property name="fileExtensions" value="java"/>
+        <property name="header" value="/**\n * &lt;copyright&gt;\n *\n * Copyright (C) 2005, 2008 Research Group Software Construction,\n *                          RWTH Aachen University, Germany.\n *\n * All rights reserved. This program and the accompanying materials\n * are made available under the terms of the Eclipse Public License\n * version 1.0, which accompanies this distribution, and is available\n * at http://www.eclipse.org/legal/epl-v10.html.\n *\n * Contributors:\n *   Research Group Software Construction - Initial API and implementation\n *\n * &lt;/copyright&gt;\n */\n"/>
+    </module>
+    <module name="NewlineAtEndOfFile"/>
+    <module name="StrictDuplicateCode">
+        <property name="min" value="20"/>
+    </module>
+    <module name="RegexpHeader">
+        <property name="severity" value="error"/>
+        <property name="fileExtensions" value="txt, properties"/>
+        <property name="header" value="#\n# Copyright \(C\) 2005, 2008 Research Group Software Construction,\n#                          RWTH Aachen University, Germany.\n#\n# All rights reserved. This program and the accompanying materials\n# are made available under the terms of the Eclipse Public License\n# version 1.0, which accompanies this distribution, and is available\n# at http://www.eclipse.org/legal/epl-v10.html.\n#\n"/>
+    </module>
+    <module name="SuppressionCommentFilter"/>
+</module>

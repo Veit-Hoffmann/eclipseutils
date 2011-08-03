@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cspecExtension
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:bc="http://www.eclipse.org/buckminster/Common-1.0"
+xmlns="http://www.eclipse.org/buckminster/CSpec-1.0"
+xmlns:cs="http://www.eclipse.org/buckminster/CSpec-1.0">
+<dependencies>
+<!-- Place your Dependencies here -->
+ <dependency name="org.apache.commons.logging"
+	componentType="osgi.bundle" versionDesignator="1.0.4" versionType="OSGi"/>
+	<dependency name="org.apache.commons.logging"
+	componentType="osgi.bundle" versionDesignator="1.1.0" versionType="OSGi"/>
+ </dependencies>
+
+    <actions>
+        <public name="checkstyle" actor="ant">
+            <actorProperties>
+      			<property key="buildFile" value="buckminster/checkstyle.ant"/>
+      			<property key="targets" value="checkstyle.workspace"/>
+  			</actorProperties>
+  			<properties>
+      			<property key="workspacePath" value="${pathToWorkspace}" />
+        	</properties>
+        </public>
+        
+    </actions>
+</cspecExtension>
+
