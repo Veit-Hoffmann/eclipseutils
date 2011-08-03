@@ -8,36 +8,31 @@
 
 	<property key="build.type" mutable="true" value="N" />
 	
-	
-	
-	
 	<searchPath name="com.googlecode.eclipseutils.mtf.plugins">
-		<provider readerType="git" componentTypes="osgi.bundle" resolutionFilter="">
-	      <uri format="{0}/bpmnmodeler,{1}">
-	          <bc:propertyRef key="workspace.root" />
-	          <bc:propertyRef key="buckminster.component" />
-	      </uri>
-	     <property key="git.remote.uri" value="git://git.eclipse.org/gitroot/bpmnmodeler"/>
-	     <property key="git.remote.name" value="bpmnmodeler"/>
-	   </provider>
+		<provider readerType="svn" componentTypes="osgi.bundle"
+			mutable="false" source="true">
+			<uri
+				format="http://eclipseutils.googlecode.com/svn/trunk/com.googlecode.eclipseutils.mtf/plugins/{0}">
+				<bc:propertyRef key="buckminster.component" />
+			</uri>
+		</provider>
 	</searchPath>
 
 	<searchPath name="com.googlecode.eclipseutils.mtf.features">
-		<provider componentTypes="eclipse.feature" readerType="cvs"
-			source="true" mutable="false">
+		<provider readerType="svn" componentTypes="eclipse.feature"
+			mutable="false" source="true">
 			<uri
-				format=":pserver:anonymous@dev.viper.sc:/home/viper/cvs,com.googlecode.eclipseutils.mtf/features/{0}-feature">
+				format="http://eclipseutils.googlecode.com/svn/trunk/com.googlecode.eclipseutils.mtf/features/{0}-feature">
 				<bc:propertyRef key="buckminster.component" />
 			</uri>
 		</provider>
 	</searchPath>
 	
-	
 	<searchPath name="com.googlecode.eclipseutils.releng">
-		<provider componentTypes="eclipse.feature" readerType="cvs"
-			source="true" mutable="false">
+		<provider readerType="svn" componentTypes="eclipse.feature"
+			mutable="false" source="true">
 			<uri
-				format=":pserver:anonymous@dev.viper.sc:/home/viper/cvs,sc.viper.ide.releng/plugins/{0}">
+				format="http://eclipseutils.googlecode.com/svn/trunk/com.googlecode.eclipseutils.releng/features/{0}-feature">
 				<bc:propertyRef key="buckminster.component" />
 			</uri>
 		</provider>
@@ -83,15 +78,16 @@
 		</provider>
 	</searchPath>
 
-	<locator searchPathRef="com.googlecode.eclipseutils.mtf.features" pattern="^sc\.viper\.platform\.mtf([\.\-].+)?"
+	<locator searchPathRef="com.googlecode.eclipseutils.mtf.features" pattern="^com\.googlecode\.eclipseutils\.mtf([\.\-].+)?"
 		failOnError="false" />
-	<locator searchPathRef="com.googlecode.eclipseutils.mtf.plugins" pattern="^sc\.viper\.platform\.mtf(\..+)?"
+	<locator searchPathRef="com.googlecode.eclipseutils.mtf.plugins" pattern="^com\.googlecode\.eclipseutils\.mtf(\..+)?"
+		failOnError="false" />
+ 	<locator searchPathRef="com.googlecode.eclipseutils.releng" pattern="^com\.googlecode\.eclipseutils\.releng([\.\-].+)?"
 		failOnError="false" />
 
+	<!-- Extenal API -->
 	<locator searchPathRef="emftools"  failOnError="false" /> 
-
     <locator searchPathRef="target.platform" failOnError="false" />
-
 	<locator searchPathRef="target.platform.delta" failOnError="false" />
 	<!--<locator searchPathRef="target.platform.orbit" />-->
 
