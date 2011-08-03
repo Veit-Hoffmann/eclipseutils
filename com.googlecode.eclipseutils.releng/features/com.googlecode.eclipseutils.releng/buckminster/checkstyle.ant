@@ -1,0 +1,37 @@
+<project>
+	<taskdef resource="checkstyletask.properties" classpath="${workspacePath}/lib/checkstyle-5.4-all.jar" />
+	<taskdef resource="net/sf/antcontrib/antlib.xml">
+		<classpath>
+			<pathelement location="${workspacePath}/lib/ant-contrib-1.0b3.jar" />
+		</classpath>
+	</taskdef>
+	<target name="checkstyle.workspace">
+		<available file="${workspacePath}/lib/ant-contrib-1.0b3.jar" property="director.exists" />
+		<checkstyle config="${workspacePath}/checkstyle/checkstyle_ViPER_Checks.xml">
+			<fileset dir="${workspacePath}plugins/com.googlecode.eclipseutils.mtf.ui/src" includes="**/*.java" />
+			<formatter type="plain" />
+			<formatter type="xml" toFile="${workspacePath}/checkstyle_errors.xml" />
+		</checkstyle>
+
+		<!--		<for param="currentPlugin" keepgoing="true">
+			<path>
+				<dirset dir="${workspacePath}">
+					<include name="plugins/sc.viper.*" />
+				</dirset>
+			</path>
+			<sequential>
+			    <if>
+			<hasNature project="@{currentPlugin}" nature="com.atlassw.tools.eclipse.checkstyle.CheckstyleNature" />
+			<then>
+				<echo message="running Checkstyle on @{currentPlugin}" />
+			 	<checkstyle config="${workspacePath}/checkstyle/checkstyle_ViPER_Checks.xml">
+					<fileset dir="@{currentPlugin}/src" includes="**/*.java" />
+					<formatter type="plain" />
+					<formatter type="xml" toFile="${workspacePath}/checkstyle_errors.xml" />
+				</checkstyle>
+					</then>
+		</if>
+			</sequential>
+		</for>-->
+	</target>
+</project>

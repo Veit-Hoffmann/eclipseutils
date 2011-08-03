@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<rmap xmlns="http://www.eclipse.org/buckminster/RMap-1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mp="http://www.eclipse.org/buckminster/MavenProvider-1.0"
+	xmlns:pmp="http://www.eclipse.org/buckminster/PDEMapProvider-1.0"
+	xmlns:bc="http://www.eclipse.org/buckminster/Common-1.0">
+
+	<property key="build.type" mutable="true" value="N" />
+	
+	
+	
+	
+	<searchPath name="com.googlecode.eclipseutils.mtf.plugins">
+		<provider readerType="git" componentTypes="osgi.bundle" resolutionFilter="">
+	      <uri format="{0}/bpmnmodeler,{1}">
+	          <bc:propertyRef key="workspace.root" />
+	          <bc:propertyRef key="buckminster.component" />
+	      </uri>
+	     <property key="git.remote.uri" value="git://git.eclipse.org/gitroot/bpmnmodeler"/>
+	     <property key="git.remote.name" value="bpmnmodeler"/>
+	   </provider>
+	</searchPath>
+
+	<searchPath name="com.googlecode.eclipseutils.mtf.features">
+		<provider componentTypes="eclipse.feature" readerType="cvs"
+			source="true" mutable="false">
+			<uri
+				format=":pserver:anonymous@dev.viper.sc:/home/viper/cvs,com.googlecode.eclipseutils.mtf/features/{0}-feature">
+				<bc:propertyRef key="buckminster.component" />
+			</uri>
+		</provider>
+	</searchPath>
+	
+	
+	<searchPath name="com.googlecode.eclipseutils.releng">
+		<provider componentTypes="eclipse.feature" readerType="cvs"
+			source="true" mutable="false">
+			<uri
+				format=":pserver:anonymous@dev.viper.sc:/home/viper/cvs,sc.viper.ide.releng/plugins/{0}">
+				<bc:propertyRef key="buckminster.component" />
+			</uri>
+		</provider>
+	</searchPath>
+
+	<searchPath name="emftools">
+		<provider componentTypes="eclipse.feature,osgi.bundle"
+			readerType="p2" source="false" mutable="false">
+			<uri format="http://dev.viper.sc/viper.updatesite/thirdparty/indigo" />
+		</provider>
+		<!--<provider componentTypes="eclipse.feature,osgi.bundle"
+			readerType="svn" mutable="false" source="true">
+			<uri format="http://emftools.googlecode.com/svn/trunk/{0}">
+				<bc:propertyRef key="buckminster.component" />
+			</uri>
+		</provider>-->	
+	</searchPath>
+
+	<searchPath name="target.platform.delta">
+		<provider componentTypes="eclipse.feature,osgi.bundle"
+			readerType="p2" source="false" mutable="false">
+			<uri format="http://download.eclipse.org/eclipse/updates/3.7" />
+		</provider>
+	</searchPath>
+	
+	<searchPath name="target.platform.orbit">
+		<provider readerType="p2" componentTypes="osgi.bundle"
+			mutable="false" source="false">
+			<uri
+				format="http://download.eclipse.org/tools/orbit/downloads/drops/R20110523182458/repository/" />
+		</provider>
+		<!--<provider readerType="p2" componentTypes="osgi.bundle"
+			mutable="false" source="false">
+			<uri
+				format="http://download.eclipse.org/tools/orbit/downloads/drops/R20100519200754/repository/" />
+		</provider>-->
+	</searchPath>
+
+	<searchPath name="target.platform">
+		<provider componentTypes="eclipse.feature,osgi.bundle"
+			readerType="p2" source="false" mutable="false">
+			<uri format="http://download.eclipse.org/releases/indigo" />
+		</provider>
+	</searchPath>
+
+	<locator searchPathRef="com.googlecode.eclipseutils.mtf.features" pattern="^sc\.viper\.platform\.mtf([\.\-].+)?"
+		failOnError="false" />
+	<locator searchPathRef="com.googlecode.eclipseutils.mtf.plugins" pattern="^sc\.viper\.platform\.mtf(\..+)?"
+		failOnError="false" />
+
+	<locator searchPathRef="emftools"  failOnError="false" /> 
+
+    <locator searchPathRef="target.platform" failOnError="false" />
+
+	<locator searchPathRef="target.platform.delta" failOnError="false" />
+	<!--<locator searchPathRef="target.platform.orbit" />-->
+
+</rmap>

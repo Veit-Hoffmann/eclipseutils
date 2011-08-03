@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.6"?>
+
+<target name="indigo">
+<locations>
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
+<unit id="org.eclipse.sdk.feature.group" version="3.7.0.v20110426-7Q7xA7DPb31rE2_TcfD-VPkLqq8sfDmLus7XtaSo-7NHB"/>
+<unit id="org.eclipse.equinox.p2.sdk.feature.group" version="3.7.0.v20110519-9N7sHDJGMMn4xUrxSmFfL7O39XLL"/>
+<unit id="org.eclipse.rcp.feature.group" version="3.7.0.v20110216-9DB5Fm1FpBGy_AaVz-mFamgY"/>
+<unit id="org.eclipse.equinox.executable.feature.group" version="3.5.0.v20110530-7P7NFUFFLWUl76mart"/>
+<repository location="http://download.eclipse.org/releases/indigo/"/>
+</location>
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
+<unit id="org.eclipse.birt.feature.group" version="3.7.0.v20110603-BDF9E7AGTzuHfngz-8A08WvWDv8v"/>
+<unit id="org.eclipse.datatools.enablement.sdk.feature.feature.group" version="1.9.0.v201106031100-7I9O-FE9JfxmjWSl6tUWLp5J91_8"/>
+<unit id="org.eclipse.datatools.sdk.feature.feature.group" version="1.9.0.v201106031100-7PA3-FEPPYuz03b7QIYA_na6LLx7"/>
+<unit id="org.eclipse.emf.sdk.feature.group" version="2.7.0.v20110606-0949"/>
+<unit id="org.eclipse.ocl.all.sdk.feature.group" version="3.1.0.v20110606-1427"/>
+<unit id="org.eclipse.xtext.sdk.feature.group" version="2.0.0.v201106070531"/>
+<unit id="org.eclipse.m2m.atl.sdk.feature.group" version="3.2.0.v20110606-0750"/>
+<unit id="org.eclipse.emf.compare.sdk.feature.group" version="1.2.0.v20110607-2028"/>
+<unit id="org.eclipse.emf.facet.sdk.feature.group" version="0.1.0.v201106070935"/>
+<unit id="org.eclipse.emf.query.sdk.feature.group" version="1.5.0.v20110502-1600-67O-95GFz03DQEiNLXRMK_NPj507"/>
+<unit id="org.eclipse.emf.transaction.sdk.feature.group" version="1.5.0.v20110502-1600-777T-9AZP-F1cMhjSqjhYl0eU20D"/>
+<unit id="org.eclipse.emf.oda.sdk.feature.group" version="1.0.0.v20110606-0949"/>
+<unit id="org.eclipse.emf.validation.sdk.feature.group" version="1.5.0.v20110502-1600-67O-96SGR55YJeZPedcQnghI6uFA"/>
+<unit id="org.eclipse.gef.sdk.feature.group" version="3.7.0.v20110425-2050-7G7W-A5WNg9RDcRXDHeSRSTUiNLI"/>
+<unit id="org.eclipse.gmf.runtime.notation.sdk.feature.group" version="1.5.0.v20110426-2159-47D08xGD6ExNBM7CIJa3CIKK9t84"/>
+<unit id="org.eclipse.gmf.runtime.sdk.feature.group" version="1.5.0.v20110607-1200-67N09E9QnChoWswz-3wf_rz0kQ8Y"/>
+<unit id="org.eclipse.graphiti.sdk.plus.feature.feature.group" version="0.8.0.v20110607-1252"/>
+<unit id="org.eclipse.emf.mwe2.language.sdk.feature.group" version="2.0.0.v201106070634"/>
+<unit id="org.eclipse.emf.mwe2.runtime.sdk.feature.group" version="2.0.0.v201106070424"/>
+<unit id="org.eclipse.emf.mwe.sdk.feature.group" version="1.1.0.v201106070424"/>
+<unit id="org.eclipse.uml2.sdk.feature.group" version="3.2.0.v201105231350"/>
+<unit id="org.eclipse.xpand.sdk.feature.group" version="1.1.0.v201106070515"/>
+<unit id="org.eclipse.xsd.sdk.feature.group" version="2.7.0.v20110606-0949"/>
+<unit id="org.eclipse.emf.mwe.core.feature.group" version="1.1.0.v201106070424"/>
+<unit id="org.eclipse.emf.mwe.sdk.feature.group" version="1.1.0.v201106070424"/>
+<unit id="org.eclipse.emf.mwe.ui.feature.group" version="1.1.0.v201106070424"/>
+<repository location="http://download.eclipse.org/releases/indigo/"/>
+</location>
+<location includeAllPlatforms="true" includeMode="slicer" type="InstallableUnit">
+<unit id="com.googlecode.emftools.ecore.feature.group" version="1.0.0.v201106060820"/>
+<repository location="http://dev.viper.sc/viper.updatesite/thirdparty/indigo/emftools"/>
+</location>
+</locations>
+</target>
