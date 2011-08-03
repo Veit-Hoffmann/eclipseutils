@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="sc.viper.openumf.ide.releng"
-      label="sc.viper.openumf.ide.releng"
+      id="com.googlecode.eclipseutils.releng"
+      label="com.googlecode.eclipseutils.releng"
       version="1.0.0.qualifier"
       provider-name="VHoff">
 
