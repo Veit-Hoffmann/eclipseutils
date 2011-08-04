@@ -21,6 +21,7 @@ import org.eclipse.emf.mwe.core.WorkflowContext;
 import org.eclipse.emf.mwe.core.issues.Issues;
 import org.eclipse.emf.mwe.core.issues.IssuesImpl;
 import org.eclipse.xpand2.output.PostProcessor;
+import org.eclipse.xtend.expression.AbstractExpressionsUsingWorkflowComponent.GlobalVarDef;
 
 import com.googlecode.eclipseutils.mtf.check.CheckComponent;
 import com.googlecode.eclipseutils.mtf.util.CustomWorkflowRunner;
@@ -74,4 +75,14 @@ public class TransformationUnit {
 		return (EObject) ctx.get("targetModel");
 	}
 
+	protected void addParameter(String name, String value) {
+
+		// breaks through encapsulation - is this really the correct way to
+		// create a globalVarDef?
+		GlobalVarDef param = new GlobalVarDef();
+		param.setName(name);
+		param.setValue("'" + value + "'");
+
+		getTransformationComponent().addGlobalVarDef(param);
+	}
 }
