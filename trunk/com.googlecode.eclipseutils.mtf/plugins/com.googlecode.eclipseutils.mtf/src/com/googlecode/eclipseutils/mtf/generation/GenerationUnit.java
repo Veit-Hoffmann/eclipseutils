@@ -21,6 +21,7 @@ import java.util.List;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.mwe.core.issues.IssuesImpl;
 import org.eclipse.xpand2.output.PostProcessor;
+import org.eclipse.xtend.expression.AbstractExpressionsUsingWorkflowComponent.GlobalVarDef;
 
 import com.googlecode.eclipseutils.mtf.check.CheckComponent;
 import com.googlecode.eclipseutils.mtf.util.CustomWorkflowRunner;
@@ -65,5 +66,16 @@ public class GenerationUnit {
 
 	public void setPostProcessors(List<PostProcessor> postProcessors) {
 		this.postProcessors = postProcessors;
+	}
+	
+	protected void addParameter(String name, String value) {
+
+		// breaks through encapsulation - is this really the correct way to
+		// create a globalVarDef?
+		GlobalVarDef param = new GlobalVarDef();
+		param.setName(name);
+		param.setValue("'" + value + "'");
+
+		getGenerationComponent().addGlobalVarDef(param);
 	}
 }
