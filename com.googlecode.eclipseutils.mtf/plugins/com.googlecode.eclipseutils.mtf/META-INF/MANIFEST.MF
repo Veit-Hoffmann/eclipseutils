@@ -7,11 +7,8 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-Activator: com.googlecode.eclipseutils.mtf.Activator
 Bundle-Vendor: de.rwth-aachen.swc
-Require-Bundle: org.apache.commons.logging;visibility:=reexport,
- org.apache.commons.cli;visibility:=reexport,
- org.eclipse.core.runtime,
+Require-Bundle: org.apache.commons.logging,
  org.eclipse.ui,
- org.eclipse.emf.ecore,
  org.eclipse.emf.transaction,
  org.eclipse.xpand,
  org.eclipse.xtend,

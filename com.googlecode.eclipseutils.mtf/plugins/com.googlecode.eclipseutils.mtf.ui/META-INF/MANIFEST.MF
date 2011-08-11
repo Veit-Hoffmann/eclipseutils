@@ -6,21 +6,15 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: de.rwth-aachen.swc
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Require-Bundle: org.apache.commons.logging;visibility:=reexport,
- org.apache.commons.cli;visibility:=reexport,
- org.eclipse.core.runtime,
- org.eclipse.core.resources,
+Require-Bundle: org.apache.commons.logging,
  org.eclipse.ui,
  org.eclipse.ui.console,
  org.eclipse.ui.ide,
- org.eclipse.emf.common,
- org.eclipse.emf.ecore,
  org.eclipse.emf.ecore.xmi,
  org.eclipse.xpand,
  org.eclipse.xtend,
  org.eclipse.xtend.typesystem.emf,
  com.googlecode.eclipseutils.mtf,
- org.eclipse.emf.mwe.utils,
  org.eclipse.emf.workspace
 Export-Package: com.googlecode.eclipseutils.mtf.ui,
  com.googlecode.eclipseutils.mtf.ui.action,

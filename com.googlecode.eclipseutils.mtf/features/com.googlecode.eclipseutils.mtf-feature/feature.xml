@@ -14,18 +14,12 @@
                          Research Group Software 
                          Construction, RWTH Aachen,
                          Germany.
-All rights reserved.
+   All rights reserved.
    </copyright>
 
    <license url="http://www.example.com/license">
       [Enter License Description here.]
    </license>
-
-   <requires>
-      <import feature="org.eclipse.xpand.sdk" />
-      <import feature="org.eclipse.xtend" />
-      <import feature="org.eclipse.xtend.typesystem.emf" />
-   </requires>
 
    <plugin
          id="com.googlecode.eclipseutils.mtf"
