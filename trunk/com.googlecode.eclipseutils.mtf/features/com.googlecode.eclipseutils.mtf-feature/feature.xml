@@ -20,10 +20,16 @@ All rights reserved.
    <license url="http://www.example.com/license">
       [Enter License Description here.]
    </license>
-   
+
    <url>
-      <update label="@UPDATE_SITE_NAME@" url="@UPDATE_SITE_URL@"/>
+      <update label="@UPDATE_SITE_NAME@"/>
    </url>
+
+   <requires>
+      <import feature="org.eclipse.xpand.sdk" />
+      <import feature="org.eclipse.xtend" />
+      <import feature="org.eclipse.xtend.typesystem.emf" />
+   </requires>
 
    <plugin
          id="com.googlecode.eclipseutils.mtf"
