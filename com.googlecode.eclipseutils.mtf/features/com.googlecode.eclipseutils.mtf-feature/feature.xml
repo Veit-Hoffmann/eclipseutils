@@ -21,10 +21,6 @@ All rights reserved.
       [Enter License Description here.]
    </license>
 
-   <url>
-      <update label="@UPDATE_SITE_NAME@"/>
-   </url>
-
    <requires>
       <import feature="org.eclipse.xpand.sdk" />
       <import feature="org.eclipse.xtend" />
