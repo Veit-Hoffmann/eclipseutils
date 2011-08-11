@@ -25,10 +25,6 @@ All rights reserved.
       <update label="@UPDATE_SITE_NAME@" url="@UPDATE_SITE_URL@"/>
    </url>
 
-   <requires>
-    <!-- <import feature="sc.viper.platform.core" version="1.0.0.qualifier"/>-->
-   </requires>
-
    <plugin
          id="com.googlecode.eclipseutils.mtf"
          download-size="0"
