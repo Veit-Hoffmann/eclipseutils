@@ -87,8 +87,8 @@
 
 	<!-- Extenal API -->
 	<locator searchPathRef="emftools"  failOnError="false" /> 
-    <locator searchPathRef="target.platform" failOnError="false" />
 	<locator searchPathRef="target.platform.delta" failOnError="false" />
+    <locator searchPathRef="target.platform" failOnError="false" />
 	<locator searchPathRef="target.platform.orbit" />
 
 </rmap>
