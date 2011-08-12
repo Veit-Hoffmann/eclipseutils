@@ -21,6 +21,19 @@
       [Enter License Description here.]
    </license>
 
+   <requires>
+      <import plugin="org.apache.commons.logging"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.emf.transaction"/>
+      <import plugin="org.eclipse.xpand"/>
+      <import plugin="org.eclipse.xtend"/>
+      <import plugin="org.eclipse.xtend.typesystem.emf"/>
+      <import plugin="org.eclipse.ui.console"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.emf.ecore.xmi"/>
+      <import plugin="org.eclipse.emf.workspace"/>
+   </requires>
+
    <plugin
          id="com.googlecode.eclipseutils.mtf"
          download-size="0"
