@@ -38,43 +38,22 @@
 		</provider>
 	</searchPath>
 
-	<searchPath name="emftools">
-		<provider componentTypes="eclipse.feature,osgi.bundle"
-			readerType="p2" source="false" mutable="false">
-			<uri format="http://dev.viper.sc/viper.updatesite/thirdparty/indigo" />
-		</provider>
-		<!--<provider componentTypes="eclipse.feature,osgi.bundle"
-			readerType="svn" mutable="false" source="true">
-			<uri format="http://emftools.googlecode.com/svn/trunk/{0}">
-				<bc:propertyRef key="buckminster.component" />
-			</uri>
-		</provider>-->	
-	</searchPath>
-
 	<searchPath name="target.platform.delta">
 		<provider componentTypes="eclipse.feature,osgi.bundle"
 			readerType="p2" source="false" mutable="false">
 			<uri format="http://download.eclipse.org/eclipse/updates/3.7" />
 		</provider>
 	</searchPath>
-	
-	<searchPath name="target.platform.orbit">
-		<provider readerType="p2" componentTypes="osgi.bundle"
-			mutable="false" source="false">
-			<uri
-				format="http://download.eclipse.org/tools/orbit/downloads/drops/R20110523182458/repository/" />
-		</provider>
-		<!--<provider readerType="p2" componentTypes="osgi.bundle"
-			mutable="false" source="false">
-			<uri
-				format="http://download.eclipse.org/tools/orbit/downloads/drops/R20100519200754/repository/" />
-		</provider>-->
-	</searchPath>
 
 	<searchPath name="target.platform">
 		<provider componentTypes="eclipse.feature,osgi.bundle"
 			readerType="p2" source="false" mutable="false">
 			<uri format="http://download.eclipse.org/releases/indigo" />
+		</provider>
+		<provider readerType="p2" componentTypes="eclipse.feature,osgi.bundle"
+			mutable="false" source="false">
+			<uri
+				format="http://download.eclipse.org/tools/orbit/downloads/drops/R20110523182458/repository/" />
 		</provider>
 	</searchPath>
 
@@ -86,8 +65,6 @@
 		failOnError="false" />
 
 	<!-- Extenal API -->
-	<locator searchPathRef="emftools"  failOnError="false" /> 
 	<locator searchPathRef="target.platform.delta" failOnError="false" />
-    <locator searchPathRef="target.platform" failOnError="false" />
-	<locator searchPathRef="target.platform.orbit" />
+    <locator searchPathRef="target.platform" />
 </rmap>
