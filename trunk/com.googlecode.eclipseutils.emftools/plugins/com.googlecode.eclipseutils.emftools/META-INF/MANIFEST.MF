@@ -6,5 +6,9 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: GOOGLECODE
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Require-Bundle: org.eclipse.emf.edit;bundle-version="2.7.1",
- org.eclipse.core.runtime;bundle-version="3.7.0"
+ org.eclipse.core.runtime;bundle-version="3.7.0",
+ org.eclipse.ui.ide;bundle-version="3.7.0",
+ org.eclipse.emf.workspace;bundle-version="1.5.1",
+ org.eclipse.emf.workspace.ui;bundle-version="1.3.0"
 Export-Package: com.googlecode.eclipseutils.emftools.editTools
+Import-Package: org.eclipse.core.resources

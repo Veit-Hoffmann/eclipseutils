@@ -62,13 +62,10 @@ public abstract class TransientItemProvider extends ItemProviderAdapter implemen
 	@Override
 	public Collection<?> getNewChildDescriptors(Object object,
 			EditingDomain editingDomain, Object sibling) {
-	    
 		Collection<Object> newChildDescriptors = new ArrayList<Object>();
-	    // collectNewChildDescriptors(newChildDescriptors, object);
+	    collectNewChildDescriptors(newChildDescriptors, object);
 		return newChildDescriptors;
 	}
-
-	/* */
 	
 	public boolean hasChildren(Object object) {
 		Assert.isTrue(target != null);
